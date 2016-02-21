@@ -1,0 +1,88 @@
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <asp:ContentPlaceHolder runat="server" id="metas">   
+    </asp:ContentPlaceHolder>
+     <link rel="stylesheet" href="/scripts/jquery.contextMenu.css" type="text/css" media="screen" />
+     <link rel="stylesheet" type="text/css" href="../Themes/Blue/Site.css" />
+    <script type="text/javascript" src='<%=ResolveUrl("~/scripts/jquery-1.3.1.js") %>' ></script>
+    <script type="text/javascript" src='<%=ResolveUrl("~/scripts/jquery-ui-1.6.js") %>' ></script>
+    <script type="text/javascript" src='<%=ResolveUrl("~/scripts/cufon-yui.js") %>' ></script>
+       <script type="text/javascript">
+            $(document).ready(function() {
+
+                $('#menulist').sortable({
+                    stop: function(event, ui) {
+                        orderPages();
+                    }
+                });
+            });
+            
+            function orderPages() {
+                var itemArray = new Array();
+                $('#menulist li').each(function(i, item) {
+                    itemArray[i] = item.id;
+                })
+                $.post("/page/sortpages/", {
+                    pageid:itemArray
+                });
+            }
+            
+        </script>
+        <script type="text/javascript">
+            var appInsights=window.appInsights||function(config){
+                function r(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s=u.createElement(o),i,f;for(s.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",u.getElementsByTagName(o)[0].parentNode.appendChild(s),t.cookie=u.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)r("track"+i.pop());return r("setAuthenticatedUserContext"),r("clearAuthenticatedUserContext"),config.disableExceptionTracking||(i="onerror",r("_"+i),f=e[i],e[i]=function(config,r,u,e,o){var s=f&&f(config,r,u,e,o);return s!==!0&&t["_"+i](config,r,u,e,o),s}),t
+            }({
+                instrumentationKey:"bb2f698c-c81a-4224-9d13-39fbf4f39452"
+            });
+        
+            window.appInsights=appInsights;
+            appInsights.trackPageView();
+    </script>
+    </head>
+<body>
+<!--Logo and login-->
+<div id="hdr1">
+    <div id="hdr2">
+        <span class="fltleft">
+            <a href="<%=Url.Action("Index","Home") %>" title="Go to Tailspin Toys - Home">
+               <img src="<%=Html.ThemeImage("logo.png") %>" alt="Tailspin Toys" />
+            </a>
+        </span>
+        <p class="fltright" style="color:#456297;">
+       <%if (Page.User.Identity.IsAuthenticated) { %>
+            Welcome back <%=this.CurrentCustomer().FullName%>!
+            | <a href="<%=Url.Action("Show","Cart") %>" style="color:#456297;"><img src="<%=Html.ThemeImage("icon_cart.gif") %>" alt="Shopping cart icon"/></a>
+            <a href="<%=Url.Action("Show","Cart") %>" style="color:#456297;">Your Cart </a> (<%=this.CurrentCart().Items.Count%>) 
+            |  <a href="<%=Url.Action("Logout","Authentication") %>" style="color:#456297;">Logout</a>
+            <%if (Page.User.IsInRole("Administrator")) { %>
+            | <a href="<%=Url.Action("Index","Site") %>" style="color:#456297;">Admin</a>
+            <%} %>
+        <% }
+        else
+        {%>
+            <a href="<%=Url.Action("Show","Cart") %>" style="color:#456297;"><img src="<%=Html.ThemeImage("icon_cart.gif") %>" alt="Shopping cart icon"/></a>
+            <a href="<%=Url.Action("Show","Cart") %>" style="color:#456297;">Your Cart </a>(0) 
+        <%} %>        
+        </p>
+     </div>
+</div> 
+
+<!--Top Navigation-->
+<div id="hdr3">
+    <% Html.RenderAction("ProductCategoryMenu", "Products"); %>
+</div>
+<div>
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+    <!--Clear out three column layout-->
+    <div class="clearLayout"></div>
+</div>
+<div id="ftr1"><p><%=Html.ActionLink("About Us","About","Home")%>&nbsp;|&nbsp;<a href="#">Careers</a>&nbsp;|&nbsp;<a href="#">Investor Relations</a>&nbsp;|&nbsp;<a href="#">Store Locations</a>&nbsp;|&nbsp;<a href="#">Check Order Status</a>&nbsp;|&nbsp;<a href="#">Returns &amp; Exchanges</a>&nbsp;|&nbsp;<a href="#">Shipping Options &amp; Charges</a></p>
+</div>
+</body>
+</html>

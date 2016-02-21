@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="aead0045-aa48-499a-b640-ebf8ffd7b700" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="08085559-38f4-4b73-bf5f-1b8ef6bf8af5" name="Web">
+      <childLayers>
+        <layer Id="35dde2b6-60e1-4fe0-a6bd-937981ca80a7" name="Helpers and DI ">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="64a093cd-c64a-44b5-befd-cb9fb31bfec9" direction="Forward">
+              <layerMoniker Id="46325101-abb2-4ab4-ba10-1b0c61b8353a" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="a991add8-9039-4f09-95f6-2d8d49476e31" direction="Forward">
+              <layerMoniker Id="b022196d-cfb2-4ce0-abca-620d6d8fbc10" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="b99a6daf-5820-4d92-9cac-c7225d7a76eb" direction="Forward">
+              <layerMoniker Id="075d2ec6-505b-4db8-a62d-a493cd30ed35" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="17f83dc0-e569-490b-87d3-4cadbe94703f" name="DI">
+              <ArtifactNode Label="DI" Category="CodeSchema_ProjectItem" Id="(Assembly=../Tailspin.WebUpgraded/Tailspin.Web.csproj File=../Tailspin.WebUpgraded/Infrastructure/DI/)">
+                <Category Ref="ProjectFolder" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Tailspin.WebUpgraded Type=SiteRegistry)" Label="SiteRegistry" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Tailspin.WebUpgraded Type=Bootstrapper)" Label="Bootstrapper" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Tailspin.WebUpgraded Namespace=Tailspin.Infrastructure Type=StructureMapControllerFactory)" Label="StructureMapControllerFactory" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+            <reference Id="3b4f343e-8489-4ec4-a61e-02b3b61626f4" name="Helpers">
+              <ArtifactNode Label="Helpers" Category="CodeSchema_ProjectItem" Id="(Assembly=../Tailspin.WebUpgraded/Tailspin.Web.csproj File=../Tailspin.WebUpgraded/Infrastructure/Helpers/)">
+                <Category Ref="ProjectFolder" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Tailspin.WebUpgraded Namespace=System.Web.Mvc Type=ControllerExtensions)" Label="ControllerExtensions" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Tailspin.WebUpgraded Namespace=Tailspin.Infrastructure Type=CSSExtensions)" Label="CSSExtensions" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Tailspin.WebUpgraded Namespace=Tailspin.Infrastructure Type=CurrencyExtensions)" Label="CurrencyExtensions" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Tailspin.WebUpgraded Type=CustomerExtensions)" Label="CustomerExtensions" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Tailspin.WebUpgraded Namespace=Tailspin.Infrastructure Type=HtmlExtensions)" Label="HtmlExtensions" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Tailspin.WebUpgraded Type=OrderExtensions)" Label="OrderExtensions" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Tailspin.WebUpgraded Type=ProductExtensions)" Label="ProductExtensions" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="4d35b3f9-375d-40b7-870d-7037c3641b50" name="Controllers">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="d56ae9c2-7c04-46d6-9698-b8d687c74ae0" direction="Forward">
+              <layerMoniker Id="35dde2b6-60e1-4fe0-a6bd-937981ca80a7" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="92639d6f-0834-440d-82a2-71b6bcf4a3a1" direction="Forward">
+              <layerMoniker Id="46325101-abb2-4ab4-ba10-1b0c61b8353a" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="59312951-01a4-4eec-a70c-b73a132d8cde" direction="Forward">
+              <layerMoniker Id="a2bbf5f7-a050-4bfb-93fc-9d692a934b5b" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="e7b6dbaf-8d3f-4187-86ae-3d4cfca7df29" direction="Forward">
+              <layerMoniker Id="075d2ec6-505b-4db8-a62d-a493cd30ed35" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="1f17cd3d-1944-43ad-a6a2-dbb55b89e08b" name="Controllers">
+              <ArtifactNode Label="Controllers" Category="CodeSchema_ProjectItem" Id="(Assembly=../Tailspin.WebUpgraded/Tailspin.Web.csproj File=../Tailspin.WebUpgraded/Controllers/)">
+                <Category Ref="ProjectFolder" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Tailspin.WebUpgraded Namespace=Tailspin.Web.App.Controllers Type=CartController)" Label="CartController" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Tailspin.WebUpgraded Namespace=Tailspin.Web.Controllers Type=HomeController)" Label="HomeController" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Tailspin.WebUpgraded Namespace=Tailspin.Web.App.Controllers Type=OrderController)" Label="OrderController" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Tailspin.WebUpgraded Namespace=Tailspin.Web.App.Controllers Type=ProductsController)" Label="ProductsController" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="a2bbf5f7-a050-4bfb-93fc-9d692a934b5b" name="MVC">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="00aaa381-af0a-4464-aa00-8caebbcd1612" direction="Forward">
+              <layerMoniker Id="35dde2b6-60e1-4fe0-a6bd-937981ca80a7" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="8e626549-a1cf-44ff-ac9a-39c3bb580bef" direction="Forward">
+              <layerMoniker Id="075d2ec6-505b-4db8-a62d-a493cd30ed35" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="7e1de4c2-5bb7-409b-a3c9-2468dcf596d4" direction="Forward">
+              <layerMoniker Id="46325101-abb2-4ab4-ba10-1b0c61b8353a" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+          <references>
+            <reference Id="71583704-9045-4afe-b342-8a2482883627" name="MVC">
+              <ArtifactNode Label="MVC" Category="CodeSchema_ProjectItem" Id="(Assembly=../Tailspin.WebUpgraded/Tailspin.Web.csproj File=../Tailspin.WebUpgraded/Infrastructure/MVC/)">
+                <Category Ref="ProjectFolder" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=Tailspin.WebUpgraded Namespace=Tailspin.Web Type=TailspinController)" Label="TailspinController" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Tailspin.WebUpgraded Namespace=Tailspin.Web Type=TailspinControllerFactory)" Label="TailspinControllerFactory" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=Tailspin.WebUpgraded Namespace=Tailspin.Web Type=TailspinViewEngine)" Label="TailspinViewEngine" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+      <references>
+        <reference Id="28c30ef5-dee2-4d9d-8c8d-3acd808553fb" name="Web.config">
+          <ArtifactNode Label="Web.config" Category="CodeSchema_ProjectItem" Id="(Assembly=../Tailspin.WebUpgraded/Tailspin.Web.csproj File=../Tailspin.WebUpgraded/Web.config)">
+            <Category Ref="File" />
+          </ArtifactNode>
+        </reference>
+        <reference Id="9968ef41-2681-4adf-aff6-1a6cff97aac0" name="Template.Master">
+          <ArtifactNode Label="Template.Master" Category="CodeSchema_ProjectItem" Id="(Assembly=../Tailspin.WebUpgraded/Tailspin.Web.csproj File=../Tailspin.WebUpgraded/Template.Master)">
+            <Category Ref="File" />
+          </ArtifactNode>
+        </reference>
+        <reference Id="967ea8d4-a5e9-4aec-b0bd-44d191a966e5" name="Home.aspx">
+          <ArtifactNode Label="Home.aspx" Category="CodeSchema_ProjectItem" Id="(Assembly=../Tailspin.WebUpgraded/Tailspin.Web.csproj File=../Tailspin.WebUpgraded/Home.aspx)">
+            <Category Ref="File" />
+          </ArtifactNode>
+        </reference>
+        <reference Id="06981b6b-2c5a-40bd-b6ae-1303045b07bc" name="Listing.aspx">
+          <ArtifactNode Label="Listing.aspx" Category="CodeSchema_ProjectItem" Id="(Assembly=../Tailspin.WebUpgraded/Tailspin.Web.csproj File=../Tailspin.WebUpgraded/Listing.aspx)">
+            <Category Ref="File" />
+          </ArtifactNode>
+        </reference>
+        <reference Id="1394ec06-1b6b-4f4d-894f-359110dbf369" name="Receipt.aspx">
+          <ArtifactNode Label="Receipt.aspx" Category="CodeSchema_ProjectItem" Id="(Assembly=../Tailspin.WebUpgraded/Tailspin.Web.csproj File=../Tailspin.WebUpgraded/Receipt.aspx)">
+            <Category Ref="File" />
+          </ArtifactNode>
+        </reference>
+        <reference Id="9dff1d08-bdba-492d-a126-32a7a32ef48e" name="About.aspx">
+          <ArtifactNode Label="About.aspx" Category="CodeSchema_ProjectItem" Id="(Assembly=../Tailspin.WebUpgraded/Tailspin.Web.csproj File=../Tailspin.WebUpgraded/About.aspx)">
+            <Category Ref="File" />
+          </ArtifactNode>
+        </reference>
+        <reference Id="432ac85e-979e-43a9-9126-10e9b56fe8a3" name="Address.aspx">
+          <ArtifactNode Label="Address.aspx" Category="CodeSchema_ProjectItem" Id="(Assembly=../Tailspin.WebUpgraded/Tailspin.Web.csproj File=../Tailspin.WebUpgraded/Address.aspx)">
+            <Category Ref="File" />
+          </ArtifactNode>
+        </reference>
+        <reference Id="d866fc36-8e0e-4621-92dc-5c9f1cfac0a7" name="Cart.aspx">
+          <ArtifactNode Label="Cart.aspx" Category="CodeSchema_ProjectItem" Id="(Assembly=../Tailspin.WebUpgraded/Tailspin.Web.csproj File=../Tailspin.WebUpgraded/Cart.aspx)">
+            <Category Ref="File" />
+          </ArtifactNode>
+        </reference>
+        <reference Id="58f189d0-b707-430b-9495-d6c13212bb03" name="Detail.aspx">
+          <ArtifactNode Label="Detail.aspx" Category="CodeSchema_ProjectItem" Id="(Assembly=../Tailspin.WebUpgraded/Tailspin.Web.csproj File=../Tailspin.WebUpgraded/Detail.aspx)">
+            <Category Ref="File" />
+          </ArtifactNode>
+        </reference>
+        <reference Id="00cd032e-2985-4bcb-b742-c7543053edd2" name="Errors.html">
+          <ArtifactNode Label="Errors.html" Category="CodeSchema_ProjectItem" Id="(Assembly=../Tailspin.WebUpgraded/Tailspin.Web.csproj File=../Tailspin.WebUpgraded/Errors.html)">
+            <Category Ref="File" />
+          </ArtifactNode>
+        </reference>
+        <reference Id="62f8e40b-e933-4868-96e2-6aefce019677" name="favicon.ico">
+          <ArtifactNode Label="favicon.ico" Category="CodeSchema_ProjectItem" Id="(Assembly=../Tailspin.WebUpgraded/Tailspin.Web.csproj File=../Tailspin.WebUpgraded/favicon.ico)">
+            <Category Ref="File" />
+          </ArtifactNode>
+        </reference>
+        <reference Id="abc9fe1b-2f77-4629-8e58-b74ebc50503e" name="Finalize.aspx">
+          <ArtifactNode Label="Finalize.aspx" Category="CodeSchema_ProjectItem" Id="(Assembly=../Tailspin.WebUpgraded/Tailspin.Web.csproj File=../Tailspin.WebUpgraded/Finalize.aspx)">
+            <Category Ref="File" />
+          </ArtifactNode>
+        </reference>
+        <reference Id="1cfddc8f-d822-4a06-a019-3b277722e74a" name="Shared">
+          <ArtifactNode Label="Shared" Category="CodeSchema_ProjectItem" Id="(Assembly=../Tailspin.WebUpgraded/Tailspin.Web.csproj File=../Tailspin.WebUpgraded/Shared/)">
+            <Category Ref="ProjectFolder" />
+          </ArtifactNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="b022196d-cfb2-4ce0-abca-620d6d8fbc10" name="Repository">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="4baa1eeb-4070-4c43-80fb-3ceab5f2d3bd" direction="Forward">
+          <layerMoniker Id="075d2ec6-505b-4db8-a62d-a493cd30ed35" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="38439f36-72f4-42c5-9de9-9c3c7cf0faec" direction="Forward">
+          <layerMoniker Id="46325101-abb2-4ab4-ba10-1b0c61b8353a" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="814d0149-8262-4884-8e3e-6c0c5af5eb09" name="Tailspin.SimpleSqlRepository.dll">
+          <ArtifactNode Label="Tailspin.SimpleSqlRepository.dll" Category="CodeSchema_Assembly" Id="(Assembly=../Tailspin.SimpleSqlRepository/bin/Debug/Tailspin.SimpleSqlRepository.dll)">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Tailspin.SimpleSqlRepository)" Label="Tailspin.SimpleSqlRepository.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="46325101-abb2-4ab4-ba10-1b0c61b8353a" name="Model">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="59b3fb7b-879b-46c9-9443-a15f6f34fbd8" direction="Forward">
+          <layerMoniker Id="075d2ec6-505b-4db8-a62d-a493cd30ed35" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="f060a17c-2612-4715-952d-c1a36330b679" name="Tailspin.Model.dll">
+          <ArtifactNode Label="Tailspin.Model.dll" Category="CodeSchema_Assembly" Id="(Assembly=../Tailspin.Model/bin/Debug/Tailspin.Model.dll)">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Tailspin.Model)" Label="Tailspin.Model.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="075d2ec6-505b-4db8-a62d-a493cd30ed35" name="Infrastructure">
+      <references>
+        <reference Id="0eca81a1-5432-4d52-adf6-e845281e5e55" name="Tailspin.Infrastructure.dll">
+          <ArtifactNode Label="Tailspin.Infrastructure.dll" Category="CodeSchema_Assembly" Id="(Assembly=../Tailspin.Infrastructure/bin/Debug/Tailspin.Infrastructure.dll)">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=Tailspin.Infrastructure)" Label="Tailspin.Infrastructure.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>
